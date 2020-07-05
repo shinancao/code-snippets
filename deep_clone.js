@@ -15,7 +15,7 @@ var cloneDeep = function(source, hash = new WeakMap()) {
     // 已经创建过的对象，直接取出返回，主要解决循环引用的情况
     if (hash.get(source)) return hash.get(source)
 
-    // 创建新的对象，并入hash
+    // 创建新的对象，存入hash
     const target = Array.isArray(source) ? [] : {}
     hash.set(source, target)
 
