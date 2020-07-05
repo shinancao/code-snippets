@@ -11,3 +11,13 @@ Function.prototype.new = function () {
     // 如果它的返回值不是一个对象，就返回该新对象
     return (typeof other === 'object' && other) || that
 }
+
+
+// test ---------------------
+
+const User = function(name) {
+    this.name = name
+}
+
+const user = User.new('Nick')
+console.log(user.name)
